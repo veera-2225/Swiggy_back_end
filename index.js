@@ -14,6 +14,9 @@ app.use('/vendor', vendorRoutes)
 app.use('/firm', firmRoutes)
 app.use('/product',productRoutes);
 app.use('/uploads',express.static('uploads'))
+app.use('/', (req, res)=>{
+    res.send({user:"Hello"})
+})
 
 
 const databaseConnect = () => {
