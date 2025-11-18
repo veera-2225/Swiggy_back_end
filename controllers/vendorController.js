@@ -67,7 +67,7 @@ const getAllVendors = async (req, res) => {
     res.json({ vendors });
   } catch (error) {
     console.log(error);
-    res.status(400).json({ message: "Getting failed" });
+    res.status(400).json({ message: "Getting failed",});
   }
 };
 
