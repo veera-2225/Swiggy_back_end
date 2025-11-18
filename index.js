@@ -4,11 +4,15 @@ const vendorRoutes = require("./routes/vendorRoutes");
 const firmRoutes = require('./routes/firmRoutes');
 const productRoutes = require("./routes/productRoutes")
 const cors = require('cors');
-const path =require("path")
+const path =require("path");
+const dotEnv = require("dotenv")
 
 const app = express();
 app.use(cors())
 app.use(express.json())
+dotEnv.config();
+
+const PORT = process.env.PORT || 5000;
 
 app.use('/vendor', vendorRoutes)
 app.use('/firm', firmRoutes)
@@ -19,11 +23,12 @@ app.use('/', (req, res)=>{
 })
 
 
+
 const databaseConnect = () => {
     mongoose.connect("mongodb+srv://veerababu4p4_db_user:veera1234@cluster0.0ag1s1m.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
     console.log("Database connected successfully")
 }
-app.listen(5000, '0.0.0.0', ()=>{
+app.listen(PORT, '0.0.0.0', ()=>{
     databaseConnect()
     console.log("Server started at 5000 PORT")
 })
