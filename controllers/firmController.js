@@ -1,5 +1,5 @@
-const Firm = require("../models/Firm");
-const Vendor = require("../models/vendor");
+const Firm = require("../models/firmModel");
+const Vendor = require("../models/vendorModel");
 const multer = require("multer");
 const path = require("path");
 

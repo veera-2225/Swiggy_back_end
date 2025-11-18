@@ -1,6 +1,6 @@
-const Product = require("../models/Product");
+const Product = require("../models/productModel");
 const multer = require("multer");
-const Firm = require("../models/Firm");
+const Firm = require("../models/firmModel");
 const path = require("path")
 
 
