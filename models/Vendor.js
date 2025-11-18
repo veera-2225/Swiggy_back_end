@@ -16,11 +16,11 @@ const vendorSchema = new mongoose.Schema({
     firm:[
         {
             type: mongoose.Schema.Types.ObjectId,
-            ref: 'Firm'
+            ref: 'firm'
         }
     ]
 });
 
-const Vendor = mongoose.model("Vendor", vendorSchema);
+const Vendor = mongoose.model("vendor", vendorSchema);
 
 module.exports = Vendor;

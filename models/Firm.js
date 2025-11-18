@@ -41,11 +41,11 @@ const firmSchema = new mongoose.Schema({
   product:[
     {
       type:mongoose.Schema.Types.ObjectId,
-      ref:'Product'
+      ref:'product'
     }
   ]
 });
 
-const firm = mongoose.model("firm", firmSchema);
+const Firm = mongoose.model("firm", firmSchema);
 
-module.exports = firm;
+module.exports = Firm;

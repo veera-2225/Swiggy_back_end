@@ -28,10 +28,10 @@ const productSchema = new mongoose.Schema({
   },
   firm:[{
     type:mongoose.Schema.Types.ObjectId,
-    ref:'Firm'
+    ref:'firm'
   }]
 });
 
-const Product = mongoose.model('Product',productSchema);
+const Product = mongoose.model('product',productSchema);
 
 module.exports = Product
